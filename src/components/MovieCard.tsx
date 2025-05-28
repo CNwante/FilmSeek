@@ -15,6 +15,12 @@ export const MovieCard: React.FC<MovieCardProps> = ({
   releaseDate,
   overview,
 }) => {
+  const truncateText = (text: string): string => {
+    const maxLength = 150;
+    return text.length > maxLength
+      ? text.slice(0, maxLength).concat("...")
+      : text;
+  };
 
   return (
     <div className="bg-white rounded-md shadow-md overflow-hidden flex flex-col h-full max-w-[350px] hover:shadow-red-500 transition-all cursor-pointer ml-4 mt-4">
@@ -35,7 +41,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
         </p>
 
         <p className="text-sm text-gray-900 flex-grow text-[1rem]">
-          {overview}
+          {truncateText(overview)}
         </p>
       </div>
     </div>
