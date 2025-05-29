@@ -45,7 +45,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
           Release Date: {releaseDate}
         </p>
 
-        <p className="text-sm text-gray-900 flex-grow text-[1rem]">
+        <p className="text-sm text-gray-900 flex-grow text-[1rem] mt-1">
           {truncateText(overview)}
         </p>
       </div>
