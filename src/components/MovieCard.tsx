@@ -23,7 +23,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
   };
 
   return (
-    <div className="bg-white rounded-md shadow-md overflow-hidden flex flex-col h-full max-w-[350px] hover:shadow-red-500 transition-all cursor-pointer ml-4 mt-4">
+    <div className="bg-white rounded-md shadow-md overflow-hidden flex flex-col h-full max-w-[350px] hover:shadow-red-500 transition-all cursor-pointer">
       <img
         src={posterUrl}
         alt={`Movie poster`}
