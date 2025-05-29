@@ -1,6 +1,6 @@
 import React from "react";
 
-interface MovieCardProps {
+export interface MovieCardProps {
   posterUrl: string;
   title: string;
   genres: string[];
