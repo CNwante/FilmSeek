@@ -2,7 +2,7 @@ import React from "react";
 import { MovieCard } from "./MovieCard";
 import type { MovieCardProps } from "./MovieCard";
 
-interface MovieGridProps {
+export interface MovieGridProps {
   movies: MovieCardProps[];
 }
 
