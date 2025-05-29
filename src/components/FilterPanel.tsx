@@ -9,10 +9,6 @@ export const FilterPanel = () => {
         <option value="" disabled>
           Select Genre
         </option>
-        <option value="action">Action</option>
-        <option value="comedy">Comedy</option>
-        <option value="drama">Drama</option>
-        {/* Add more genres as needed */}
       </select>
 
       {/*==== Year Filter ====*/}
@@ -23,10 +19,6 @@ export const FilterPanel = () => {
         <option value="" disabled>
           Select Release Year
         </option>
-        <option value="2025">2025</option>
-        <option value="2024">2024</option>
-        <option value="2023">2023</option>
-        {/* Add more years as needed */}
       </select>
     </div>
   );
