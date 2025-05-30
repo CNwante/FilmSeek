@@ -13,7 +13,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex justify-center w-full mt-20">
+    <form onSubmit={handleSubmit} className="flex justify-center w-full">
       <input
         type="text"
         value={query}
