@@ -1,6 +1,23 @@
+import React from "react";
 import clsx from "clsx";
 
-export const FilterPanel = () => {
+interface FilterPanelProps {
+  genres: string[];
+  years: number[];
+  selectedGenre: string;
+  selectedYear: number | "";
+  onGenreChange: (genre: string) => void;
+  onYearChange: (year: number | "") => void;
+}
+
+export const FilterPanel: React.FC<FilterPanelProps> = ({
+  genres,
+  years,
+  selectedGenre,
+  selectedYear,
+  onGenreChange,
+  onYearChange,
+}) => {
   const selectStyle = clsx(
     "w-60",
     "px-4",
@@ -17,17 +34,35 @@ export const FilterPanel = () => {
   return (
     <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
       {/*==== Genre Filter ====*/}
-      <select className={selectStyle} defaultValue="">
+      <select
+        value={selectedGenre}
+        onChange={(e) => onGenreChange(e.target.value)}
+        className={selectStyle}
+      >
         <option value="" disabled>
           Select Genre
         </option>
+        {genres.map((genre) => (
+          <option key={genre} value={genre}>
+            {genre}
+          </option>
+        ))}
       </select>
 
       {/*==== Year Filter ====*/}
-      <select className={selectStyle} defaultValue="">
-        <option value="" disabled>
-          Select Release Year
-        </option>
+      <select
+        value={selectedYear}
+        onChange={(e) =>
+          onYearChange(e.target.value ? parseInt(e.target.value) : "")
+        }
+        className={selectStyle}
+      >
+        <option value="">Select Release Year</option>
+        {years.map((year) => (
+          <option key={year} value={year}>
+            {year}
+          </option>
+        ))}
       </select>
     </div>
   );
