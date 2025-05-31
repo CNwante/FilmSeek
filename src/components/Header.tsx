@@ -1,7 +1,11 @@
 import React from "react";
 import clsx from "clsx";
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  onBackToSearch: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ onBackToSearch }) => {
   const fontSizes = "text-xl sm:text-2xl md:text-3xl";
 
   return (
@@ -13,14 +17,15 @@ export const Header: React.FC = () => {
         </span>
       </div>
       <nav className="space-x-4">
-        <span
+        <button
+          onClick={onBackToSearch}
           className={clsx(
             fontSizes,
             "text-gray-600 hover:text-blue-500 cursor-pointer"
           )}
         >
           Search Movies 🔍
-        </span>
+        </button>
       </nav>
     </header>
   );
