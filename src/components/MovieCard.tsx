@@ -5,7 +5,7 @@ export interface MovieCardProps {
   posterUrl: string;
   title: string;
   genres: string[];
-  releaseDate: string;
+  release_date: string;
   overview: string;
 }
 
@@ -13,7 +13,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
   posterUrl,
   title,
   genres,
-  releaseDate,
+  release_date,
   overview,
 }) => {
   const paragraphStyles = clsx(
@@ -42,7 +42,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
           </p>
         )}
         <p className={paragraphStyles}>
-          Release Date: {releaseDate}
+          Release Date: {release_date}
         </p>
 
         <p className="text-sm text-gray-900 flex-grow text-[1rem] mt-1">
