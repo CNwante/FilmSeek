@@ -1,5 +1,7 @@
-function App() {
-  return <h1>Hello FilmSeek</h1>;
-}
+import { Home } from "./pages/Home";
+
+const App: React.FC = () => {
+  return <Home />;
+};
 
 export default App;
