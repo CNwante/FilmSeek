@@ -1,6 +1,8 @@
 import React from "react";
 import { MovieCard } from "./MovieCard";
 import type { MovieCardProps } from "./MovieCard";
+import spinner from "../assets/spinner.webp";
+import not_found from "../assets/not_found.png";
 
 export interface MovieGridProps {
   movies: MovieCardProps[];
@@ -12,7 +14,7 @@ export const MovieGrid: React.FC<MovieGridProps> = ({ movies, loading }) => {
     return (
       <div className="flex items-center justify-center h-full w-screen mt-[25dvh]">
         <img
-          src="src/assets/spinner.webp"
+          src={spinner}
           className="w-16 md:w-20 lg:w-24 bg-gray-200 rounded-full"
           alt="Loading spinner"
         />
@@ -23,7 +25,7 @@ export const MovieGrid: React.FC<MovieGridProps> = ({ movies, loading }) => {
     return (
       <div className="flex items-center justify-center h-full w-screen">
         <img
-          src="src/assets/not_found.png"
+          src={not_found}
           className="bg-gray-200 rounded-full"
           alt="Loading spinner"
         />

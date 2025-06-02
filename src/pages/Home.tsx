@@ -87,7 +87,7 @@ export const Home: React.FC = () => {
       const mappedMovies = results.map((movie: any) => ({
         posterUrl: movie.poster_path
           ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-          : "https://via.placeholder.com/500x750?text=No+Image",
+          : "https://placehold.co/500x750?text=No+Image",
         title: movie.title,
         genres: movie.genre_ids.map(
           (id: number) => genres.find((g) => g.id === id)?.name || "Unknown"
