@@ -129,12 +129,6 @@ export const Home: React.FC = () => {
     <>
       {view === "search" && (
         <SearchView
-          genres={genres.map((g) => g.name)}
-          years={years}
-          selectedGenre={selectedGenre}
-          selectedYear={selectedYear}
-          onGenreChange={setSelectedGenre}
-          onYearChange={setSelectedYear}
           onSearch={handleSearch}
           onDiscover={handleDiscover}
         />
