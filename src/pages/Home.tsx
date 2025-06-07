@@ -109,6 +109,11 @@ export const Home: React.FC = () => {
     setView("result");
   };
 
+  const handleDiscover = () => {
+    setQuery("");
+    setView("result");
+  }
+
   useEffect(() => {
     getGenres();
 
@@ -131,6 +136,7 @@ export const Home: React.FC = () => {
           onGenreChange={setSelectedGenre}
           onYearChange={setSelectedYear}
           onSearch={handleSearch}
+          onDiscover={handleDiscover}
         />
       )}
 

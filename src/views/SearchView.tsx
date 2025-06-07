@@ -1,25 +1,14 @@
 import React from "react";
 import { SearchBar } from "../components/SearchBar";
-import { FilterPanel } from "../components/FilterPanel";
 
 interface SearchViewProps {
-  genres: string[];
-  years: number[];
-  selectedGenre: string;
-  selectedYear: number | "";
-  onGenreChange: (genre: string) => void;
-  onYearChange: (year: number | "") => void;
   onSearch: (query: string) => void;
+  onDiscover: () => void;
 }
 
 export const SearchView: React.FC<SearchViewProps> = ({
-  genres,
-  years,
-  selectedGenre,
-  selectedYear,
-  onGenreChange,
-  onYearChange,
   onSearch,
+  onDiscover,
 }) => (
   <div className="min-h-screen flex flex-col items-center justify-center bg-gray-300 p-4">
     <header className="flex justify-center items-center flex-col">
@@ -31,13 +20,17 @@ export const SearchView: React.FC<SearchViewProps> = ({
       </p>
     </header>
     <SearchBar onSearch={onSearch} />
-    <FilterPanel
-      genres={genres}
-      years={years}
-      selectedGenre={selectedGenre}
-      selectedYear={selectedYear}
-      onGenreChange={onGenreChange}
-      onYearChange={onYearChange}
-    />
+    <div className="mt-6 text-center">
+      <p className="text-gray-600 mb-2">
+        Not sure what to search for? 🤔 <br />
+        Let us surprise you. 👇
+      </p>
+      <button
+        onClick={onDiscover}
+        className="bg-yellow-400 text-black font-semibold px-5 py-2 rounded-full shadow-md hover:bg-yellow-500 transition cursor-pointer"
+      >
+        🎲 Discover a Random Movie
+      </button>
+    </div>
   </div>
 );
