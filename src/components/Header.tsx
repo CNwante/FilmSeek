@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({ onBackToSearch }) => {
             onClick={onBackToSearch}
             className={clsx(
               fontSizes,
-              "text-gray-600 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded transition"
+              "text-gray-600 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 cursor-pointer rounded transition"
             )}
           >
             Search Movies
