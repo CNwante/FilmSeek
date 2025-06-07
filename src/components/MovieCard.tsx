@@ -28,11 +28,11 @@ export const MovieCard: React.FC<MovieCardProps> = ({
   };
 
   return (
-    <div className="bg-white rounded-md shadow-md overflow-hidden flex flex-col h-full max-w-[350px] hover:shadow-red-500 transition-all cursor-pointer">
+    <div className="bg-red-50 rounded-md shadow-md overflow-hidden flex flex-col h-full max-w-[350px] hover:shadow-red-500 cursor-pointer transform transition-transform duration-200 ease-in-out hover:scale-105">
       <img
         src={posterUrl}
         alt={`Movie poster`}
-        className="w-full h-48 object-cover p-4 rounded-3xl"
+        className="w-full h-96 object-cover p-4 rounded-3xl"
       />
       <div className="p-4 flex flex-col flex-grow">
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
