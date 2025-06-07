@@ -105,6 +105,12 @@ export const Home: React.FC = () => {
   };
 
   const handleSearch = (searchQuery: string) => {
+    const trimmedQuery = searchQuery.trim();
+    if (trimmedQuery === "") {
+      alert("Please enter a movie name to search.");
+      return;
+    }
+
     setQuery(searchQuery);
     setView("result");
   };
