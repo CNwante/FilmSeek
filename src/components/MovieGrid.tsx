@@ -3,7 +3,7 @@ import { MovieCard } from "./MovieCard";
 import type { MovieCardProps } from "./MovieCard";
 import spinner from "../assets/spinner.webp";
 import oops from "../assets/oops.jpg";
-import TMDB_logo from "../assets/TMDB_logo.svg"
+import TMDB_logo from "../assets/TMDB_logo.svg";
 
 export interface MovieGridProps {
   movies: MovieCardProps[];
@@ -22,24 +22,24 @@ export const MovieGrid: React.FC<MovieGridProps> = ({ movies, loading }) => {
       </div>
     );
 
-    if (!movies || movies.length === 0) {
-      return (
-        <div className="flex flex-col items-center justify-center text-center min-h-[60vh] px-4">
-          <img
-            src={oops}
-            alt="No movies found"
-            className="w-48 md:w-60 mb-6 opacity-80"
-          />
-          <h2 className="text-xl md:text-2xl font-semibold text-gray-700 mb-2">
-            No movies found
-          </h2>
-          <p className="text-gray-500 text-sm md:text-base max-w-md">
-            We couldn’t find any movies matching your selection. Try changing the genre or year or search again.
-          </p>
-        </div>
-      );
-    }
-
+  if (!movies || movies.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center text-center min-h-[60vh] px-4">
+        <img
+          src={oops}
+          alt="No movies found"
+          className="w-48 md:w-60 mb-6 opacity-80"
+        />
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-700 mb-2">
+          No movies found
+        </h2>
+        <p className="text-gray-500 text-sm md:text-base max-w-md">
+          We couldn’t find any movies matching your selection. Try changing the
+          genre or year or search again.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <>
