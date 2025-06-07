@@ -11,12 +11,14 @@ export const SearchView: React.FC<SearchViewProps> = ({
   onDiscover,
 }) => (
   <div className="min-h-screen flex flex-col items-center justify-center bg-gray-300 p-4">
-    <header className="flex justify-center items-center flex-col">
-      <h1 className="text-6xl font-bold">
-        Film<span className="text-red-600">Seek</span>
+    <header className="flex justify-center items-center flex-col text-center mb-6">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight font-sans">
+        <span className="text-black">Film</span>
+        <span className="text-red-600">Seek</span>
       </h1>
-      <p className="italic text-2xl md:text-3xl my-1 mb-4">
-        Search Less, Watch More!
+      <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-gray-700 mt-2">
+        Search Less,{" "}
+        <span className="italic font-semibold text-black">Watch More!</span>
       </p>
     </header>
     <SearchBar onSearch={onSearch} />
