@@ -31,7 +31,7 @@ export const SearchView: React.FC<SearchViewProps> = ({
         onClick={onDiscover}
         className="bg-yellow-400 text-black font-semibold px-5 py-2 rounded-full shadow-md hover:bg-yellow-500 transition cursor-pointer"
       >
-        🎲 Discover a Random Movie
+        🎲 Discover Random Movies
       </button>
     </div>
   </div>
