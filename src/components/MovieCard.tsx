@@ -16,9 +16,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
   release_date,
   overview,
 }) => {
-  const paragraphStyles = clsx(
-    'text-sm', 'text-gray-500', 'mb-1'
-  );
+  const paragraphStyles = "text-sm text-gray-500 mb-1";
 
   const truncateText = (text: string): string => {
     const maxLength = 150;
@@ -37,13 +35,10 @@ export const MovieCard: React.FC<MovieCardProps> = ({
       <div className="p-4 flex flex-col flex-grow">
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
         {genres && genres.length > 0 && (
-          <p className={paragraphStyles}>
-            Genre: {genres.join(", ")}
-          </p>
+          <p className={clsx(paragraphStyles)}>Genre: {genres.join(", ")}</p>
         )}
-        <p className={paragraphStyles}>
-          Release Date: {release_date}
-        </p>
+
+        <p className={clsx(paragraphStyles)}>Release Date: {release_date}</p>
 
         <p className="text-sm text-gray-900 flex-grow text-[1rem] mt-1">
           {truncateText(overview)}
