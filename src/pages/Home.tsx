@@ -63,7 +63,7 @@ export const Home: React.FC = () => {
   }, [view, query, selectedGenre, selectedYear]);
 
   return (
-    <>
+    <div className="bg-gray-100">
       {view === "search" && (
         <SearchView onSearch={handleSearch} onDiscover={handleDiscover} />
       )}
@@ -81,6 +81,6 @@ export const Home: React.FC = () => {
           loading={loading}
         />
       )}
-    </>
+    </div>
   );
 };

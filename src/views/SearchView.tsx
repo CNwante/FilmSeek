@@ -10,7 +10,7 @@ export const SearchView: React.FC<SearchViewProps> = ({
   onSearch,
   onDiscover,
 }) => (
-  <div className="min-h-screen flex flex-col items-center justify-center bg-gray-300 p-4">
+  <div className="min-h-screen flex flex-col items-center justify-center p-4">
     <header className="flex justify-center items-center flex-col text-center mb-6">
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight font-sans">
         <span className="text-black">Film</span>
