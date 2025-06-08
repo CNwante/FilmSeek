@@ -47,7 +47,7 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
         }
         className={clsx(selectStyle)}
       >
-        <option value="">Select Release Year</option>
+        <option value="" disabled>Select Release Year</option>
         {years.map((year) => (
           <option key={year} value={year}>
             {year}
