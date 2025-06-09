@@ -1,54 +1,115 @@
-# React + TypeScript + Vite
+# 🎬 FilmSeek
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**FilmSeek** is a modern web app that allows users to search and filter movies using data from [The Movie Database (TMDB)](https://www.themoviedb.org/). It supports searching by title, filtering by genre and release year, and displays results in an intuitive, card-based layout.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+* 🔍 Search for movies by name
+* 🎭 Filter by genre
+* 📅 Filter by release year
+* 🎞️ Responsive movie cards with posters and details
+* ⚡ Built with React, TypeScript, Tailwind CSS, and TMDB API
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📸 Screenshots
+
+### Search View
+![Search View](./public/screenshots/search_view.png)
+
+### Result View
+![Result View](./public/screenshots/result_view.png)
+
+---
+
+## 🛠️ Tech Stack
+
+* **Framework**: React + Vite
+* **Language**: TypeScript
+* **Styling**: Tailwind CSS v4
+* **API**: TMDB (The Movie Database)
+* **Others**: GitHub Issues, Uizard (UI Design)
+
+---
+
+## 🧱 Folder Structure
+```bash
+public/
+├── screenshots/
+src/
+├── assets/ # Images, icons
+├── components/ # Reusable UI components (Header, SearchBar, FilterPanel, MovieCard)
+├── pages/ # Top-level page(s)
+├── services/ # API interaction (movieApi.ts)
+├── views/ # View-level UI (SearchView, ResultView)
+├── App.tsx
+├── main.tsx
+└── index.css
 ```
+---
+## 🧪 How to Run Locally
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+  ### 1. Clone the repository
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+  ```bash
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+  git clone https://your-GitHub-token@github.com/your-username/FilmSeek.git
+
+  cd filmseek
+  ```
+  ### 1. Install dependencies using your preferred package manager
+
+  ```bash
+  npm install
+  ```
+  ### 3. Create a `.env` file
+  ```bash
+  VITE_TMDB_API_KEY=your_tmdb_api_key_here
+  ```
+  ### 4. Start the development server using your preferred package manager
+
+  ```bash
+  npm run dev
+  ```
+---
+
+## 📁 Environment Variables
+
+| Variable                         | Description            |
+| -------------------------------- | ---------------------- |
+| VITE\_TMDB\_API\_KEY             | Your API key from TMDB |
+
+---
+
+## 👥 Contributing
+
+Want to improve FilmSeek? Here's how to get started:
+
+1. Fork the repo
+2. Create your feature branch: `git checkout -b feature/YourFeature`
+3. Commit your changes: `git commit -m 'Add YourFeature'`
+4. Push to the branch: `git push origin feature/YourFeature`
+5. Create a pull request
+
+---
+
+## 👍 Credits
+
+* Task provided by [UPTICK TALENT](https://upticktalent.africa)
+* Movie data provided by [TMDB](https://www.themoviedb.org/)
+* Design inspired by clean UX practices and prototyped with Uizard
+* Friends for testing and suggesting improvements for the app
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## ✨ Author
+
+**Solomon C. Nwante** – [@CNwante](https://twitter.com/CNwante)
